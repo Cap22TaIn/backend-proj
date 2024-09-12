@@ -8,4 +8,4 @@ const storage = multer.diskStorage({
   }, //ye unique banna h baad me
 });
 
-export const upload = multer({ storage, });
+export const upload = multer({storage, });

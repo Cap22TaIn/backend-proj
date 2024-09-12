@@ -75,9 +75,6 @@ userSchema.methods.generateRefreshToken=async function(){
     return jwt.sign(
         {
         _id:this._id,//mongoDB se _id mil jaata h
-        email:this.email,
-        userName:this.userName,
-        fullName:this.fullName
     },
     process.env.REFRESH_TOKEN_SECRET,
     {
@@ -86,4 +83,4 @@ userSchema.methods.generateRefreshToken=async function(){
 )
 }
 
-export const User=mongoose.Model("User",userSchema);
+export const User=mongoose.model("User",userSchema);

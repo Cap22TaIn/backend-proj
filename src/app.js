@@ -6,7 +6,7 @@ app.use(cors({
     origin:process.env.CORS_ORIGIN,
     credentials:true
 }))
-
+//app.use()->middleware k liye krte hai
 app.use(express.json({limit:"16kb"})) //16kb se jada json nhi accept krega json form se aaya data except krne k liye
 app.use(express.urlencoded({extended:true,limit:"16kb"}));//ye url se aaya data accept krega
 app.use(express.static("public"));//ye apne server me hi data store krta h public file me store krega
